@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B4D5297-8D5E-4608-A8FC-CECF774937AC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Encog.Tests</RootNamespace>
+    <AssemblyName>Encog.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\encodernet.eg" />
+    <None Include="Resources\iris-euro.csv" />
+    <None Include="Resources\iris.csv" />
+    <None Include="Resources\simple-c.ega" />
+    <None Include="Resources\simple-r.ega" />
+    <None Include="Resources\simple.csv" />
+    <None Include="Resources\xor-nn.eg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Util\NetworkUtil.cs" />
+    <Compile Include="Util\SerializeRoundTrip.cs" />
+    <Compile Include="Util\TempDir.cs" />
+    <Compile Include="Util\TestResourceLoader.cs" />
+    <Compile Include="Util\XOR.cs" />
+    <Compile Include="Util\Normalize\TestMapped.cs" />
+    <Compile Include="Util\Normalize\TestMultiplicative.cs" />
+    <Compile Include="Util\Normalize\TestNormArray.cs" />
+    <Compile Include="Util\Normalize\TestNormCSV.cs" />
+    <Compile Include="Util\Normalize\TestNormDataSet.cs" />
+    <Compile Include="Util\Normalize\TestSegregate.cs" />
+    <Compile Include="Util\Normalize\TestZAxis.cs" />
+    <Compile Include="Persist\TestPersistART.cs" />
+    <Compile Include="Persist\TestPersistBAM.cs" />
+    <Compile Include="Persist\TestPersistBasicNetwork.cs" />
+    <Compile Include="Persist\TestPersistBayes.cs" />
+    <Compile Include="Persist\TestPersistBoltzmann.cs" />
+    <Compile Include="Persist\TestPersistCPN.cs" />
+    <Compile Include="Persist\TestPersistEPLPopulation.cs" />
+    <Compile Include="Persist\TestPersistFreeform.cs" />
+    <Compile Include="Persist\TestPersistHMM.cs" />
+    <Compile Include="Persist\TestPersistHopfield.cs" />
+    <Compile Include="Persist\TestPersistNEAT.cs" />
+    <Compile Include="Persist\TestPersistPNN.cs" />
+    <Compile Include="Persist\TestPersistPopulation.cs" />
+    <Compile Include="Persist\TestPersistRBF.cs" />
+    <Compile Include="Persist\TestPersistSOM.cs" />
+    <Compile Include="Persist\TestPersistSVM.cs" />
+    <Compile Include="Persist\TestPersistTrainingContinuation.cs" />
+    <Compile Include="Parse\Expression\Common\TestBoolean.cs" />
+    <Compile Include="Parse\Expression\Common\TestExpression.cs" />
+    <Compile Include="Parse\Expression\Common\TestExpressionVar.cs" />
+    <Compile Include="Parse\Expression\Common\TestFunctions.cs" />
+    <Compile Include="Parse\Expression\Common\TestRenderCommon.cs" />
+    <Compile Include="Parse\Expression\Common\TestString.cs" />
+    <Compile Include="Parse\Expression\EPL\TestRenderEPL.cs" />
+    <Compile Include="Parse\Expression\RPN\TestRenderRPN.cs" />
+    <Compile Include="Parse\Tags\Read\TestXMLRead.cs" />
+    <Compile Include="Parse\Tags\Write\TestXmlWrite.cs" />
+    <Compile Include="Networks\TestConsistency.cs" />
+    <Compile Include="Networks\Training\TestFolded.cs" />
+    <Compile Include="Networks\Training\TestTraining.cs" />
+    <Compile Include="Networks\Training\Competitive\TestCompetitive.cs" />
+    <Compile Include="Networks\Training\Competitive\Neighborhood\TestNeighborhood.cs" />
+    <Compile Include="Prune\TestPruneSelective.cs" />
+    <Compile Include="MathUtil\Matrices\TestBiPolarUtil.cs" />
+    <Compile Include="MathUtil\Matrices\TestMatrix.cs" />
+    <Compile Include="MathUtil\Matrices\TestMatrixMath.cs" />
+    <Compile Include="MathUtil\Matrices\Hessian\TestHessian.cs" />
+    <Compile Include="ML\Bayes\TestBayesNet.cs" />
+    <Compile Include="ML\Bayes\TestEnumerationQuery.cs" />
+    <Compile Include="ML\Bayes\TestK2.cs" />
+    <Compile Include="ML\Bayes\TestSamplingQuery.cs" />
+    <Compile Include="ML\Data\Basic\TestBasicMLSequenceSet.cs" />
+    <Compile Include="ML\Data\Buffer\TestBinaryData.cs" />
+    <Compile Include="ML\Data\Buffer\TestBufferedNeuralDataSet.cs" />
+    <Compile Include="ML\Data\Dynamic\TestDynamic.cs" />
+    <Compile Include="ML\Data\Specific\TestCSVNeuralData.cs" />
+    <Compile Include="ML\Data\Specific\TestSQLDataSet.cs" />
+    <Compile Include="ML\Data\Temporal\TestTemporal.cs" />
+    <Compile Include="ML\EA\Sort\TestMaximizeAdjustedScoreComp.cs" />
+    <Compile Include="ML\EA\Sort\TestMaximizeScoreComp.cs" />
+    <Compile Include="ML\EA\Sort\TestMinimizeAdjustedScoreComp.cs" />
+    <Compile Include="ML\EA\Sort\TestMinimizeScoreComp.cs" />
+    <Compile Include="ML\HMM\TestHMM.cs" />
+    <Compile Include="ML\KMeans\TestKMeans.cs" />
+    <Compile Include="ML\Prg\TestEncogProgram.cs" />
+    <Compile Include="ML\Prg\TestProgramClone.cs" />
+    <Compile Include="ML\Prg\Species\TestCompareEncogProgram.cs" />
+    <Compile Include="ML\Prg\Train\TestGenerate.cs" />
+    <Compile Include="ML\Prg\Train\Crossover\TestSubtreeCrossover.cs" />
+    <Compile Include="ML\Prg\Train\Rewrite\TestRewriteAlgebraic.cs" />
+    <Compile Include="Engine\Network\Activation\TestActivationBiPolar.cs" />
+    <Compile Include="Engine\Network\Activation\TestActivationGaussian.cs" />
+    <Compile Include="Engine\Network\Activation\TestActivationLOG.cs" />
+    <Compile Include="Engine\Network\Activation\TestActivationLinear.cs" />
+    <Compile Include="Engine\Network\Activation\TestActivationSIN.cs" />
+    <Compile Include="Engine\Network\Activation\TestActivationSigmoid.cs" />
+    <Compile Include="Engine\Network\Activation\TestActivationSoftMax.cs" />
+    <Compile Include="Engine\Network\Activation\TestActivationTANH.cs" />
+    <Compile Include="TestBotUtil.cs" />
+    <Compile Include="Browse\TestAddress.cs" />
+    <Compile Include="Browse\TestBrowse.cs" />
+    <Compile Include="Browse\TestWebPageData.cs" />
+    <Compile Include="HTML\TestParseHTML.cs" />
+    <Compile Include="App\Analyst\AnalystTestingUtility.cs" />
+    <Compile Include="App\Analyst\TestAnalystClassification.cs" />
+    <Compile Include="App\Analyst\TestAnalystRegression.cs" />
+    <Compile Include="App\Analyst\TestEncogAnalyst.cs" />
+    <Compile Include="App\CSV\TestBalanceCSV.cs" />
+    <Compile Include="App\CSV\TestFilter.cs" />
+    <Compile Include="App\CSV\TestNinjaFileConvert.cs" />
+    <Compile Include="App\CSV\TestNinjaStreamWriter.cs" />
+    <Compile Include="App\CSV\TestNormalizeArray.cs" />
+    <Compile Include="App\CSV\TestProcessIndicators.cs" />
+    <Compile Include="App\CSV\TestSegregateCSV.cs" />
+    <Compile Include="App\CSV\TestShuffle.cs" />
+    <Compile Include="App\CSV\TestSort.cs" />
+    <Compile Include="App\CSV\TestYahooDownload.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Encog\Encog.csproj">
+      <Project>{31567046-A52F-4F8F-9AB9-D19E57200EBF}</Project>
+      <Name>Encog</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\hello.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

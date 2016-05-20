@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleExamples", "ConsoleExamples\ConsoleExamples.csproj", "{6E0BDD06-AB9B-41A6-ACA3-096DD9065580}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encog", "Encog\Encog.csproj", "{31567046-A52F-4F8F-9AB9-D19E57200EBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encog.Tests", "Encog.Tests\Encog.Tests.csproj", "{3B4D5297-8D5E-4608-A8FC-CECF774937AC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E0BDD06-AB9B-41A6-ACA3-096DD9065580}.Debug|x86.ActiveCfg = Debug|x86
+		{6E0BDD06-AB9B-41A6-ACA3-096DD9065580}.Debug|x86.Build.0 = Debug|x86
+		{6E0BDD06-AB9B-41A6-ACA3-096DD9065580}.Release|x86.ActiveCfg = Release|x86
+		{6E0BDD06-AB9B-41A6-ACA3-096DD9065580}.Release|x86.Build.0 = Release|x86
+		{31567046-A52F-4F8F-9AB9-D19E57200EBF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{31567046-A52F-4F8F-9AB9-D19E57200EBF}.Debug|x86.Build.0 = Debug|Any CPU
+		{31567046-A52F-4F8F-9AB9-D19E57200EBF}.Release|x86.ActiveCfg = Release|Any CPU
+		{31567046-A52F-4F8F-9AB9-D19E57200EBF}.Release|x86.Build.0 = Release|Any CPU
+		{3B4D5297-8D5E-4608-A8FC-CECF774937AC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3B4D5297-8D5E-4608-A8FC-CECF774937AC}.Debug|x86.Build.0 = Debug|Any CPU
+		{3B4D5297-8D5E-4608-A8FC-CECF774937AC}.Release|x86.ActiveCfg = Release|Any CPU
+		{3B4D5297-8D5E-4608-A8FC-CECF774937AC}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
